@@ -35,7 +35,14 @@ Export list for 10.10.10.10:
 /home/nfs *
 ```
 ### Then just simply mount it
-
+```
 sudo mount -t nfs 10.10.0.10:/home/nfs /var/backups
-
+```
+### There is a file named backup.zip
+#### But its password protected
+```
+zip2john backup.zip > hash
+john hash -w ~/wordlists/rockyou.txt
+```
+### Once youve uncompressed the file, we can see that it's a home directory
 
