@@ -1,5 +1,5 @@
 # SERVER FROM HELL WRITEUP
-#### Author: DeadPackets
+#### Author: TheHackerGiraffe
 ![elmo](./images/elmo.jpeg)
 ## [Task 1] Flag.txt | "Start at port 1337 and enumerate your way."
 #### First connect to port 1337 with nc
