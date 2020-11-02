@@ -1,5 +1,4 @@
 # SERVER FROM HELL WRITEUP
-https://tryhackme-images.s3.amazonaws.com/room-icons/15aae7a0b9c12597a7a7cd9f7db85c48.jpeg
 #### Author: DeadPackets
 
 ## [Task 1] Flag.txt | "Start at port 1337 and enumerate your way."
