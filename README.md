@@ -44,5 +44,9 @@ sudo mount -t nfs 10.10.0.10:/home/nfs /var/backups
 zip2john backup.zip > hash
 john hash -w ~/wordlists/rockyou.txt
 ```
-### Once youve uncompressed the file, we can see that it's a home directory
+### Once you've uncompressed the zip, we can see that it's hades's home directory
+#### Output:
+```
+authorized_keys  flag.txt  hint.txt  id_rsa  id_rsa.pub
 
+```
