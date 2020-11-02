@@ -47,12 +47,13 @@ john hash -w ~/wordlists/rockyou.txt
 ```
 authorized_keys  flag.txt  hint.txt  id_rsa  id_rsa.pub
 ```
-### Nice, we have an id_rsa key
+### Nice, we have the flag and an id_rsa key
 ##### The problem now is that we don't know which port ssh is running on, lets check the hint.
 ```
 output:
 2500-4500
 ```
+## [Task 2] User.txt
 #### this is probably refering the to range of ports that ssh is running on
 #### lets modify our script
 ```bash
@@ -91,4 +92,12 @@ applicable law.
 ### We have a shell, but its an interactive ruby shell
 #### A simple command will allow us to spawn a shell
 ```
-irb(main):001:0>system("/bin/bash")
+irb(main):001:0> system("/bin/bash")
+```
+
+
+
+
+
+
+
