@@ -6,7 +6,7 @@ output:
 ```bash
 Welcome traveller, to the beginning of your journey
 To begin, find the trollface
-Legend says he's hiding in the first 100 ports
+Legend says hes hiding in the first 100 ports
 Try printing the banners from the ports
 ```bash
 
