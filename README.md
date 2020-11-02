@@ -100,8 +100,21 @@ hades@hell:~$ ls
 user.txt
 ```
 ## [Task 3] Root.txt
-### Now all we have to do is escalate our privs
-### Looking at the hint, we know that "getcap" has something to do with our escalation.
+#### Now all we have to do is escalate our privs
+#### Looking at the hint, we know that "getcap" has something to do with our escalation.
+We can find capabilties with the following command
+```
+hades@hell:~$ getcap -r / 2>/dev/null
+/usr/bin/mtr-packet = cap_net_raw+ep
+/bin/tar = cap_dac_read_search+ep
+```
+### Looking at the output, we know that /bin/tar has read capabilites
+##### It took me an embarrassingly long amount of time to realize that we did not have write access to /home/hades
+##### So we need to do this in /dev/shm
+
+
+
+
 
 
 
