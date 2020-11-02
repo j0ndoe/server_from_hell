@@ -94,8 +94,14 @@ applicable law.
 ```
 irb(main):001:0> system("/bin/bash")
 ```
-
-
+### And we have user.txt
+```
+hades@hell:~$ ls
+user.txt
+```
+## [Task 3] Root.txt
+### Now all we have to do is escalate our privs
+### Looking at the hint, we know that "getcap" has something to do with our escalation.
 
 
 
