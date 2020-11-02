@@ -63,7 +63,32 @@ do
 done
 ```
 ### Now we just wait until we get a login prompt
+#### Nice, we have a shell
+```
+ Welcome to hell. We hope you enjoy your stay!
+ 
 
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
 
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
 
-
+ ██░ ██ ▓█████  ██▓     ██▓    
+▓██░ ██▒▓█   ▀ ▓██▒    ▓██▒    
+▒██▀▀██░▒███   ▒██░    ▒██░    
+░▓█ ░██ ▒▓█  ▄ ▒██░    ▒██░    
+░▓█▒░██▓░▒████▒░██████▒░██████▒
+ ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░
+ ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░
+ ░  ░░ ░   ░     ░ ░     ░ ░   
+ ░  ░  ░   ░  ░    ░  ░    ░  ░
+                               
+ Welcome to hell. We hope you enjoy your stay!
+ irb(main):001:0>
+```
+### We have a shell, but its an interactive ruby shell
+#### A simple command will allow us to spawn a shell
+```
+irb(main):001:0>system("/bin/bash")
