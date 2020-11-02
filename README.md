@@ -13,7 +13,7 @@ Try printing the banners from the ports
 ### Write a simple script to connect from ports 1 - 100:
 ```bash
 #!/bin/bash
-for port in {2500..4500}
+for port in {1..100}
 do
     nc 10.10.10.10 -p $port
 done
