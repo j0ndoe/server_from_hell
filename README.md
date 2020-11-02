@@ -19,7 +19,7 @@ do
 done
 ```
 
-### Output of port 12345
+Output of port 12345
 ```
 NFS shares are cool, especially when they are misconfigured
 It's on the standard port, no need for another scan
