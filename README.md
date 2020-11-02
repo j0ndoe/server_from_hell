@@ -46,7 +46,6 @@ john hash -w ~/wordlists/rockyou.txt
 #### Output:
 ```
 authorized_keys  flag.txt  hint.txt  id_rsa  id_rsa.pub
-
 ```
 ### Nice, we have an id_rsa key
 ##### The problem now is that we don't know which port ssh is running on, lets check the hint.
