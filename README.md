@@ -1,6 +1,6 @@
 # SERVER FROM HELL WRITEUP
 #### Author: DeadPackets
-[Task 1] Flag.txt | "Start at port 1337 and enumerate your way."
+[Task 1] Flag.txt | "Start at port 1337 and enumerate your way."\n
 First connect to port 1337 with nc,
 output:
 ```
